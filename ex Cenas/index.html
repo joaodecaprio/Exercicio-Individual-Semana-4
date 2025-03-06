@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX Cenas</title>
+    <script src="./phaser.js"></script>
+    <script src="./scenes/Welcome.js"></script>
+    <script src="./scenes/WagDragon.js"></script>
+
+</head>
+<body>
+    <script>
+
+    var config = {
+        type: Phaser.AUTO,
+        autoCenter: Phaser.Scale.CENTER,
+        width: 800,
+        height: 600,
+        scene: [Welcome, WagDragon],
+        physics: {
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 300 },
+                debug: true
+            }
+        }
+    };
+
+    var game = new Phaser.Game(config);
+    game.scene.start("Welcome");
+
+    </script>
+
+</body>
+</html>
